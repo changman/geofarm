@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#2e7d32">
+  <title>GeoFarm</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="map"></div>
+
+  <header id="hud">
+    <span id="coins">🪙 0</span>
+    <span id="mode"></span>
+  </header>
+
+  <section id="sheet" hidden></section>
+  <div id="toast" hidden></div>
+
+  <!-- H3 격자 라이브러리 (전역 h3) -->
+  <script src="https://unpkg.com/h3-js@4.5.0/dist/h3-js.umd.js"></script>
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>

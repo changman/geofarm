@@ -1,0 +1,37 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; overflow: hidden; font-family: system-ui, -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; }
+#map { position: fixed; inset: 0; }
+
+#hud {
+  position: fixed; top: calc(env(safe-area-inset-top) + 10px); left: 10px; right: 10px;
+  display: flex; justify-content: space-between; pointer-events: none; z-index: 5;
+}
+#hud span { background: #fff; border-radius: 999px; padding: 6px 14px; font-weight: 700; box-shadow: 0 2px 8px rgba(0,0,0,.2); }
+#hud span:empty { display: none; }
+
+#sheet {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 6;
+  background: #fff; border-radius: 16px 16px 0 0; padding: 16px 16px calc(env(safe-area-inset-bottom) + 16px);
+  box-shadow: 0 -4px 16px rgba(0,0,0,.2);
+}
+#sheet h2 { margin: 0 0 4px; font-size: 18px; }
+#sheet p { margin: 0 0 12px; color: #555; font-size: 14px; }
+#sheet .close { position: absolute; top: 8px; right: 12px; border: 0; background: none; font-size: 22px; padding: 6px; }
+#sheet .actions { display: flex; gap: 8px; }
+#sheet .actions button {
+  flex: 1; border: 0; border-radius: 12px; padding: 12px 6px; font-size: 15px; font-weight: 700;
+  background: #2e7d32; color: #fff;
+}
+#sheet .actions button small { display: block; font-weight: 400; opacity: .85; }
+#sheet .actions button:disabled { background: #bbb; }
+#sheet .bar { height: 10px; background: #eee; border-radius: 5px; overflow: hidden; margin-bottom: 8px; }
+#sheet .bar i { display: block; height: 100%; background: #f2c14e; width: 0; }
+
+#toast {
+  position: fixed; left: 50%; top: 64px; transform: translateX(-50%); z-index: 7;
+  background: rgba(0,0,0,.8); color: #fff; padding: 8px 14px; border-radius: 8px; font-size: 14px; max-width: 90%;
+}
+
+.player-marker, .crop-marker { pointer-events: none; line-height: 1; }
+.player-marker { font-size: 34px; filter: drop-shadow(0 2px 2px rgba(0,0,0,.4)); }
+.crop-marker { font-size: 26px; }

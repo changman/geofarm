@@ -1,0 +1,12 @@
+{
+  "name": "geofarm",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "npx serve .",
+    "test": "node --test"
+  },
+  "devDependencies": {
+    "h3-js": "^4.5.0"
+  }
+}
